@@ -1,6 +1,8 @@
-// Scrivi una funzione sequenzaOperazioni che accetta un array di operazioni (funzioni) e un tempo di intervallo.
+// Scrivi una funzione sequenzaOperazioni che accetta
+//  un array di operazioni (funzioni) e un tempo di intervallo.
 
-// Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo di intervallo.
+// Ogni operazione deve essere eseguita in sequenza 
+// con un ritardo uguale al tempo di intervallo.
 
 
 function sequenzaOperazioni(operazioni, intervallo) {
@@ -24,4 +26,4 @@ function sequenzaOperazioni(operazioni, intervallo) {
     }
   ];
 
-  sequenzaOperazioni(operazioni, 2000);
+  sequenzaOperazioni(operazioni, 4000);

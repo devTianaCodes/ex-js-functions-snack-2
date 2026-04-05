@@ -9,23 +9,25 @@
 function creaThrottler(funzione, limite) {
     let ultimaEsecuzione = 0;
 
-    return function () {
+    return function (...args) {
       const adesso = Date.now();
 
       if (adesso - ultimaEsecuzione >= limite) {
-        funzione();
+        
         ultimaEsecuzione = adesso;
+        funzione(...args);
       }
-    };
+      else {
+        console.log("esecuzione ignorata");
+      }
+    }
   }
 
-  // Esempio
-  function saluta() {
-    console.log("Ciao!");
-  }
+  
 
-  const throttledSaluta = creaThrottler(saluta, 2000);
+  const throttledSaluta = creaThrottler(() => console.log("Ciao") , 1000);
 
+  throttledSaluta();
   throttledSaluta();
   throttledSaluta();
   throttledSaluta();
